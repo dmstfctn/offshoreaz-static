@@ -1,0 +1,15 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="0" height="0" viewBox="0 0 0 0" enable-background="new 0 0 0 0" xml:space="preserve">
+	<filter id="oazfilters-drop-shadow">
+		<feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+		<feOffset dx="0" dy="6" result="offsetblur"/>
+		<feColorMatrix result="matrixOut" in="offOut" type="matrix"
+      		values="0 0 0 0 0 0 
+      				0 0 0 0 0 0 
+      				0 0 0 0 0 0 
+      				0.6 0" />
+		<feMerge>
+			<feMergeNode/>
+			<feMergeNode in="SourceGraphic"/>
+		</feMerge>
+	</filter>
+</svg>

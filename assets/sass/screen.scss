@@ -1,0 +1,114 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3";
+
+$site_clr_bg: #eeeeee;
+
+@mixin linearGradient($top, $bottom){
+    background: $top; /* Old browsers */
+    background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  $top 0%,$bottom 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+html, body{
+	width: 100%;
+	height: 100%;
+	font-size: 12px;
+	overflow: hidden;
+	background: url('../images/pattern.gif');
+}
+
+.layer{
+	//background: #FFFFFF;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+}
+
+#header{
+	width: 100%;
+	position: fixed;
+	header{
+		position: relative;
+		width: 64em;
+		margin: 0 auto;
+		@include box-sizing( border-box );
+		padding: 2.8rem 2rem;
+		height: 10rem;
+		line-height: 10rem;
+		h1{
+			letter-spacing: 1px;
+			font-weight: bold;
+			font-size: 2.5rem;
+			line-height: 3rem;
+			
+			height: 100%;
+			.offshore{
+				
+			}
+			.a-z{
+				font-style: italic;
+			}
+			svg{
+				width: auto;
+				max-height: 100%;
+				overflow: visible;		
+			}
+
+			.text{
+				font-size: 0;
+			}
+			a{
+				text-decoration: none;
+			}
+		}
+	}
+	.incomplete-info{
+		opacity: 0;
+		position: absolute;
+		right: 2rem;
+		top: 50%;
+		@include transform( translateY(-50%) );
+		width: 3rem;
+		height: 3rem;
+		svg{
+			position: absolute;
+    		top: 0;
+			width: 100%;
+			height: 100%;
+		}
+		&:hover{
+			svg{
+				cursor: pointer;
+				opacity: 0.8;
+			}
+		}
+	}	
+	svg{
+		stroke: #aaaaaa;
+		stroke-width: 3px;
+		fill: #dddddd;
+		@include transition( stroke 6s 1s linear, fill 6s 2s linear );		
+	}
+		.svgwrap{
+			height: 100%;
+			-webkit-filter: drop-shadow( 0px 2px 1px rgba(0, 0, 0, 0.2) );
+			filter: drop-shadow( 0px 2px 1px rgba(0, 0, 0, 0.2) ); 
+		}
+}
+
+@import "site";
+@import "about";
+@import "visuals";
+@import "inquiries";
+@import "modes";

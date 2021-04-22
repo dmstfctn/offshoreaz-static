@@ -1,0 +1,34 @@
+body.mode__information{
+	#information{
+		opacity: 1;
+		@include transition( opacity 1.5s .5s ease-in );
+	}
+	#site{			
+		top: calc( 100% - 12rem );
+		@include transition( top .5s ease-in-out );
+	}
+}
+
+body.mode__visuals{
+	#visuals{
+		opacity: 1;
+		.shapes{
+			opacity: 1;
+		}
+	}
+
+}
+
+body.complete__false{
+	#header{
+		z-index: 99;
+		.incomplete-info{
+			opacity: 1;
+		}
+	}
+	#site .box{
+		opacity: 0.5;
+		-webkit-filter: blur(10px);
+				filter: blur(10px);
+	}
+}
